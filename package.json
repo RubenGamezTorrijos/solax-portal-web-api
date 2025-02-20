@@ -1,0 +1,26 @@
+{
+  "name": "solax-portal-web-api",
+  "version": "1.0.0",
+  "description": "Nodo personalizado para Node-RED que obtiene datos de Solax Power Web API v1.",
+  "main": "nodes/solax-portal-web-api.js",
+  "scripts": {
+    "start": "node-red"
+  },
+  "keywords": [
+    "node-red",
+    "solax",
+    "api",
+    "monitorización"
+  ],
+  "author": "Rubén Gámez Torrijos",
+  "license": "Apache 2.0",
+  "node-red": {
+    "nodes": {
+      "solax-portal-web-api": "nodes/solax-portal-web-api.js"
+    }
+  },
+  "dependencies": {
+    "node-fetch": "^2.1.0"
+  },
+  "devDependencies": {}
+}
