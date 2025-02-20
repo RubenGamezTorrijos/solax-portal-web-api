@@ -1,0 +1,39 @@
+<script type="text/javascript">
+  RED.nodes.registerType("solax-portal-web-api", {
+    category: "network",   
+    color: "#f4b400",
+    defaults: {
+      token: { value: "" },
+      siteId: { value: "" },
+      dataType: { value: "overview" } // Añadimos 'dataType' como nuevo parámetro con valor por defecto
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "font-awesome/fa-sun",
+    label: function () {
+      return "Solax Portal Web API v1";
+    },
+  });
+</script>
+
+<script type="text/x-red" data-template-name="solax-portal-web-api">
+  <div class="form-row">
+    <label for="node-input-token"><i class="fa fa-key"></i> Token</label>
+    <input type="text" id="node-input-token" placeholder="Ingrese su TOKEN">
+  </div>
+  <div class="form-row">
+    <label for="node-input-siteId"><i class="fa fa-building"></i> ID del Sitio</label>
+    <input type="text" id="node-input-siteId" placeholder="Ingrese el ID del sitio">
+  </div>
+  <div class="form-row">
+    <label for="node-input-dataType"><i class="fa fa-exchange"></i> Tipo de Datos</label>
+    <select id="node-input-dataType">
+      <option value="overview">Datos Generales (Overview)</option>
+      <option value="inverterList">Datos del Inversor (InverterList)</option>
+    </select>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="solax-portal-web-api">
+  <p>Este nodo permite obtener datos en tiempo real desde la API v1 de Solax Power G1/G2, ya sea la vista general (overview) o los datos del inversor (invertList).</p>
+</script>
